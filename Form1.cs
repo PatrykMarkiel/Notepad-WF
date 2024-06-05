@@ -191,11 +191,17 @@ namespace Notatnik2
         }
         private void Bigger()
         {
-            richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, richTextBox1.Font.Size + 2);
+            if (richTextBox1.Font.Size < 100)
+            {
+                richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, richTextBox1.Font.Size + 2);
+            }
         }
         private void Smaller()
         {
-            richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, richTextBox1.Font.Size - 2);
+            if (richTextBox1.Font.Size > 8)
+            {
+                richTextBox1.Font = new Font(richTextBox1.Font.FontFamily, richTextBox1.Font.Size - 2);
+            }
         }
         private void FileBack()
         {
